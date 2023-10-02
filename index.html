@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Temporizador estilo pomodoro">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script type="module" src="./src/main.js" defer></script>
+  <title>FocusTimer 2.0 - Pomodoro</title>
+</head>
+<body>
+  <div class="app">
+    <!-- <button id="togglemode">
+      <span>Ativar/Desativar Light Mode</span>
+      <i class="ph-sun ph-bold"></i>
+      <i class="ph-bold ph-moon"></i>
+    </button> -->
+    
+    <div class="left-side">
+      
+      <section id="timer" class="flex">
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </section>
+      
+      <section id="controls" class="flex">
+        <button data-action="toggleRunning" class="ph ph-play-circle">
+          <span class="sr-only">Iniciar contador</span>
+        </button>
+        <button data-action="toggleRunning" class="ph ph-pause-circle">
+          <span class="sr-only">Pausar contador</span>
+        </button>
+        <button data-action="set" class="ph ph-timer">
+          <span class="sr-only">Ajustar contador</span>
+        </button>
+        <button data-action="reset" class="ph ph-stop-circle">
+          <span class="sr-only">Reiniciar contador</span>
+        </button>
+        <button data-action="add5Min" class="ph ph-plus-circle secondary">
+          <span class="sr-only">Aumentar 5 minutos ao contador</span>
+        </button>
+        <button data-action="subtracts5Min" class="ph ph-minus-circle secondary">
+          <span class="sr-only">Diminuir 5 minutos ao contador</span>
+        </button>
+      </section>
+    </div>
+    <div class="rightSide">
+      <button data-action="toggleForestTheme" id="forestTheme" class="ph ph-tree-evergreen">
+        <span class="sr-only" id="forestThemeText">Ativar/desativar o tema da floresta ao temporizador</span>
+      </button>
+      <button data-action="toggleRainTheme" id="rainTheme" class="ph ph-cloud-rain">
+        <span class="sr-only" id="rainThemeText">Ativar/desativar o tema da chuva ao temporizador</span>
+      </button>
+      <button data-action="toggleCoffeeTheme" id="coffeeTheme" class="ph ph-coffee">
+        <span class="sr-only" id="coffeeThemeText">Ativar/desativar o tema da cafeteria ao temporizador</span>
+      </button>
+      <button data-action="toggleFireTheme" id="fireTheme" class="ph ph-campfire">
+        <span class="sr-only" id="fireThemeText">Ativar/desativar o tema da lareira ao temporizador</span>
+      </button>
+    </div>
+  </div>
+</body>
+</html>

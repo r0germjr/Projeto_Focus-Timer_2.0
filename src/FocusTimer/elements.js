@@ -1,0 +1,8 @@
+export const controls = document.getElementById('controls')
+export const rightSide = document.querySelector('.rightSide')
+export const forestThemeText = document.querySelector('#forestThemeText')
+export const rainThemeText = document.querySelector('#rainThemeText')
+export const coffeeThemeText = document.querySelector('#coffeeThemeText')
+export const fireThemeText = document.querySelector('#fireThemeText')
+export const minutes = document.getElementById('minutes')
+export const seconds = document.getElementById('seconds')

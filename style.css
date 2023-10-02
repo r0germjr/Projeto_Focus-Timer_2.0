@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --hue: 194;
+  --bg-color: hsl(var(--hue), 5%, 7%);
+  --primary-color: hsl(var(--hue), 100%, 63%);
+  --text-color: hsl(var(--hue), 40%, 98%);
+  --controls-bg-color: hsl(var(--hue), 0%, 14%);
+  font-size: clamp(40%, 1% + 2vw, 62.5%);
+}
+
+html.forest-bg {
+  --bg-color: hsl(129, 34%, 20%);
+}
+
+html.rain-bg {
+  --bg-color: hsl(212, 33%, 20%);
+}
+
+html.coffee-bg {
+  --bg-color: hsl(6, 37%, 11%);
+}
+
+html.fire-bg {
+  --bg-color: hsl(6, 92%, 15%);
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20rem;
+  align-items: center;
+}
+
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rightSide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+/* classe utilitária */
+.flex {
+  display: flex;
+}
+
+#timer {
+  font-size: 12.6rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+#controls {
+  gap: 4rem;
+}
+
+.left-side button {
+  background: transparent;
+  border: 0;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 4.8rem;
+}
+
+.rightSide button {
+  background: hsla(240, 9%, 89%, 1);
+  border: 0;
+  color: var(--bg-color);
+  cursor: pointer;
+  width: 13.8rem;
+  height: 15.2rem;
+  border-radius: 2.4rem;
+  font-size: 4.8rem;
+}
+
+.secondary {
+  color: var(--text-color);
+}
+
+.running .ph-play-circle,
+.running .ph-timer,
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle {
+  display: none;
+}
+
+.forest-bg {
+  background: white;
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0px;
+  border: 0;
+  appearance: none;
+}
